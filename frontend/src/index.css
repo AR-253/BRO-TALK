@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased text-slate-300 selection:bg-pink-500/30 selection:text-white;
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    background-color: #0f0c29;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl;
+}
+
+.glass-dark {
+  @apply bg-black/40 backdrop-blur-md border border-white/10;
+}
+
+/* Animation Delays */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Reaction Animations */
+@keyframes reaction-popup {
+  0% {
+    transform: scale(0.5) translateY(10px);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.1) translateY(-5px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.reaction-animate {
+  opacity: 0;
+  animation: reaction-popup 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
