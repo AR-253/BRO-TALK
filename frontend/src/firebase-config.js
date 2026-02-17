@@ -3,13 +3,13 @@ import { getMessaging, getToken, onMessage } from "firebase/messaging";
 
 // [IMPORTANT] User needs to replace these with their actual Firebase project config
 const firebaseConfig = {
-    apiKey: "YOUR_FIREBASE_API_KEY",
-    authDomain: "YOUR_FIREBASE_AUTH_DOMAIN",
-    projectId: "YOUR_FIREBASE_PROJECT_ID",
-    storageBucket: "YOUR_FIREBASE_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_FIREBASE_MESSAGING_SENDER_ID",
-    appId: "YOUR_FIREBASE_APP_ID",
-    measurementId: "YOUR_FIREBASE_MEASUREMENT_ID"
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID,
+    measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
@@ -20,7 +20,7 @@ export const requestForToken = async (api) => {
         const permission = await Notification.requestPermission();
         if (permission === "granted") {
             const currentToken = await getToken(messaging, {
-                vapidKey: "YOUR_FIREBASE_VAPID_KEY"
+                vapidKey: process.env.REACT_APP_FIREBASE_VAPID_KEY
             });
             if (currentToken) {
                 console.log("FCM Token:", currentToken);
