@@ -3,15 +3,12 @@ import { Link, Outlet, useNavigate, useLocation } from 'react-router-dom';
 import {
     LayoutDashboard,
     Users,
-    MessageSquare,
     Library,
     AlertTriangle,
     LogOut,
     ExternalLink,
     Settings as SettingsIcon,
     History,
-    Eye,
-    UserPlus,
     Activity,
     Shield
 } from 'lucide-react';

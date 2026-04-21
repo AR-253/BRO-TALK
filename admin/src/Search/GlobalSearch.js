@@ -22,7 +22,7 @@ const GlobalSearch = () => {
                 navigate({ search: params.toString() }, { replace: true });
             }
         }
-    }, [location.pathname]);
+    }, [location.pathname, location.search, navigate]);
 
     // Debounced URL update on query change
     useEffect(() => {
@@ -40,7 +40,7 @@ const GlobalSearch = () => {
             }
         }, 300);
         return () => clearTimeout(timeout);
-    }, [query]);
+    }, [query, location.search, navigate]);
 
     return (
         <div className="relative flex-1 max-w-xl mx-auto px-4" ref={searchRef}>
