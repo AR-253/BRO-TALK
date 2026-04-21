@@ -43,11 +43,17 @@ const postSchema = mongoose.Schema({
     trendingNotificationSent: {
         type: Boolean,
         default: false
+    },
+    isHidden: {
+        type: Boolean,
+        default: false
     }
 }, {
     timestamps: true,
 });
 
+postSchema.index({ topic: 1 });
+postSchema.index({ user: 1 });
 postSchema.index({ title: 'text', content: 'text' });
 
 module.exports = mongoose.model('Post', postSchema);

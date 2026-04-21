@@ -32,7 +32,11 @@ const commentSchema = mongoose.Schema({
             enum: ['like', 'love', 'haha', 'wow', 'sad', 'angry'],
             required: true
         }
-    }]
+    }],
+    isHidden: {
+        type: Boolean,
+        default: false
+    }
 }, {
     timestamps: true,
 });

@@ -5,11 +5,20 @@ const path = require('path');
 const serviceAccountPath = path.join(__dirname, '..', 'config', 'serviceAccountKey.json');
 
 if (fs.existsSync(serviceAccountPath)) {
-    const serviceAccount = require(serviceAccountPath);
-    admin.initializeApp({
-        credential: admin.credential.cert(serviceAccount)
-    });
-    console.log('Firebase Admin Initialized');
+    try {
+        const serviceAccount = require(serviceAccountPath);
+        if (!admin.apps.length && serviceAccount && serviceAccount.project_id) {
+            admin.initializeApp({
+                credential: admin.credential.cert(serviceAccount)
+            });
+            console.log('Firebase Admin Initialized');
+        } else if (!serviceAccount || !serviceAccount.project_id) {
+            console.warn('Firebase Service Account Key is invalid. Push notifications will be disabled.');
+        }
+    } catch (error) {
+        console.error('Error loading Firebase Service Account Key:', error.message);
+        console.warn('Push notifications will be disabled.');
+    }
 } else {
     console.warn('Firebase Service Account Key not found. Push notifications will be disabled.');
 }

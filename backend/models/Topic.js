@@ -28,4 +28,7 @@ const topicSchema = mongoose.Schema({
     timestamps: true,
 });
 
+topicSchema.index({ subscribers: 1 });
+topicSchema.index({ title: 1 });
+
 module.exports = mongoose.model('Topic', topicSchema);

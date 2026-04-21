@@ -26,9 +26,18 @@ const {
     logoutAll,
     updatePassword,
     updateEmail,
-    deleteAccount
+    deleteAccount,
+    warnUser,
+    banUser,
+    getAdminStats,
+    updateUserRole,
+    getAuditLogs,
+    getAdmins,
+    createAdminAccount,
+    updateAdminPermissions,
+    deleteAdminAccount,
 } = require('../controllers/authController');
-const { protect, admin } = require('../middleware/authMiddleware');
+const { protect, admin, superAdmin } = require('../middleware/authMiddleware');
 
 router.post('/', registerUser);
 router.post('/login', loginUser);
@@ -61,6 +70,17 @@ router.put('/resetpassword/:resettoken', resetPassword);
 
 // Admin Routes
 router.get('/', protect, admin, getAllUsers);
+router.get('/admin/stats', protect, admin, getAdminStats);
 router.put('/:id/suspend', protect, admin, suspendUser);
+router.put('/:id/warn', protect, admin, warnUser);
+router.put('/:id/ban', protect, admin, banUser);
+router.put('/:id/role', protect, superAdmin, updateUserRole);
+router.get('/admin/audit-logs', protect, admin, getAuditLogs);
+
+// Dedicated Admin Management (Super Admin Only)
+router.get('/admin/list', protect, superAdmin, getAdmins);
+router.post('/admin/create', protect, superAdmin, createAdminAccount);
+router.put('/admin/update/:id', protect, superAdmin, updateAdminPermissions);
+router.delete('/admin/delete/:id', protect, superAdmin, deleteAdminAccount);
 
 module.exports = router;

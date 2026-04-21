@@ -47,12 +47,40 @@ const userSchema = mongoose.Schema({
     },
     role: {
         type: String,
-        enum: ['user', 'admin'],
+        enum: ['user', 'admin', 'superadmin'],
         default: 'user'
+    },
+    adminTitle: {
+        type: String,
+        default: ''
+    },
+    permissions: {
+        type: [String],
+        default: []
     },
     isSuspended: {
         type: Boolean,
         default: false
+    },
+    isBanned: {
+        type: Boolean,
+        default: false
+    },
+    isDeletionPending: {
+        type: Boolean,
+        default: false
+    },
+    deletionDate: {
+        type: Date,
+        default: null
+    },
+    warnings: {
+        type: Number,
+        default: 0
+    },
+    moderationUntil: {
+        type: Date,
+        default: null
     },
     resetPasswordToken: String,
     resetPasswordExpire: Date,
@@ -140,7 +168,7 @@ userSchema.methods.getResetPasswordToken = function () {
 
 userSchema.pre('save', async function (next) {
     if (!this.isModified('password')) {
-        next();
+        return next();
     }
     const salt = await bcrypt.genSalt(10);
     this.password = await bcrypt.hash(this.password, salt);

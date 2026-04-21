@@ -1,0 +1,19 @@
+[
+  {
+    "_id": "699484a3555a04b9d6384d90",
+    "content": "Wow this is helpful",
+    "post": "698f70612198d2f875686e03",
+    "user": "699483fe555a04b9d6384c0a",
+    "parentComment": null,
+    "reactions": [
+      {
+        "user": "698c9d5970c4c78eb6502446",
+        "type": "like",
+        "_id": "699485dc555a04b9d6385138"
+      }
+    ],
+    "createdAt": "2026-02-17T15:09:23.857Z",
+    "updatedAt": "2026-02-17T15:14:37.070Z",
+    "__v": 1
+  }
+]

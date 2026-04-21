@@ -116,26 +116,26 @@ const TopicDetail = () => {
     };
 
     if (loading) return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-800 to-indigo-900">
+        <div className="h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-800 to-indigo-900">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
         </div>
     );
 
     if (error) return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-800 to-indigo-900">
+        <div className="h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-800 to-indigo-900">
             <div className="text-red-300 text-xl">{error}</div>
         </div>
     );
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-800 to-indigo-900 py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="px-4 sm:px-6 lg:px-8 relative flex flex-col" style={{ height: 'calc(100vh - 80px)', overflow: 'hidden' }}>
             {/* Animated Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
                 <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
                 <div className="absolute top-[-10%] right-[-10%] w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
             </div>
 
-            <div className={`relative z-10 mx-auto ${currentUser ? 'max-w-5xl' : 'max-w-4xl'}`}>
+            <div className={`relative z-10 mx-auto flex-1 flex flex-col overflow-hidden pt-6 ${currentUser ? 'max-w-5xl w-full' : 'max-w-4xl w-full'}`}>
                 <Link to="/topics" className="inline-flex items-center text-indigo-300 hover:text-white mb-8 transition-colors">
                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                     Back to Topics
@@ -204,7 +204,7 @@ const TopicDetail = () => {
                 )}
 
                 {/* Posts List */}
-                <div className="space-y-6">
+                <div className="flex-1 overflow-y-auto space-y-6 pr-1" style={{scrollbarWidth:'thin', scrollbarColor:'rgba(99,102,241,0.4) transparent'}}>
                     <div className="flex justify-between items-center mb-6">
                         <h2 className="text-2xl font-bold text-white">Latest Discussions</h2>
                         {currentUser && (

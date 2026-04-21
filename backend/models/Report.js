@@ -4,7 +4,7 @@ const reportSchema = mongoose.Schema({
     reporter: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-        required: true
+        required: false
     },
     reportedItem: {
         type: mongoose.Schema.Types.ObjectId,
@@ -14,7 +14,7 @@ const reportSchema = mongoose.Schema({
     itemType: {
         type: String,
         required: true,
-        enum: ['Post', 'Comment']
+        enum: ['Post', 'Comment', 'User']
     },
     reason: {
         type: String,

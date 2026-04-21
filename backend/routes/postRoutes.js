@@ -15,19 +15,20 @@ const {
 const { protect, getMe } = require('../middleware/authMiddleware');
 
 router.get('/search', getMe, searchPosts);
-router.get('/user/:userId', getPostsByUser);
+// router.get('/user/:userId', getPostsByUser); // Duplicate removed
 
 router.route('/')
-    .get(getPosts)
+    .get(getMe, getPosts)
     .post(protect, createPost);
 
-router.get('/topic/:topicId', getPostsByTopic);
+router.get('/topic/:topicId', getMe, getPostsByTopic);
 
 router.route('/:id')
-    .get(getPostById)
+    .get(getMe, getPostById)
     .delete(protect, deletePost)
     .put(protect, updatePost);
 
 router.put('/:id/react', protect, reactToPost);
+router.get('/user/:userId', getMe, getPostsByUser);
 
 module.exports = router;

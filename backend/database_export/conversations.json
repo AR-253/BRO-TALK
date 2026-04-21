@@ -1,0 +1,47 @@
+[
+  {
+    "_id": "698e223e271d26e68bfe9c6b",
+    "participants": [
+      "698c9d5970c4c78eb6502446",
+      "698de80cd2d2a67f9c0a9455"
+    ],
+    "lastMessage": "hi",
+    "unreadCount": {
+      "698c9d5970c4c78eb6502446": 0,
+      "698de80cd2d2a67f9c0a9455": 0
+    },
+    "createdAt": "2026-02-12T18:55:58.688Z",
+    "updatedAt": "2026-02-13T16:45:24.815Z",
+    "__v": 0
+  },
+  {
+    "_id": "698e2480b32fa39e7ea2e8c1",
+    "participants": [
+      "698c9d5970c4c78eb6502446",
+      "698cca5835f114fc6aa59ce3"
+    ],
+    "lastMessage": "hi ",
+    "unreadCount": {
+      "698cca5835f114fc6aa59ce3": 2,
+      "698c9d5970c4c78eb6502446": 0
+    },
+    "createdAt": "2026-02-12T19:05:36.916Z",
+    "updatedAt": "2026-02-13T16:00:52.939Z",
+    "__v": 0
+  },
+  {
+    "_id": "699484f4555a04b9d6384e9d",
+    "participants": [
+      "698c9d5970c4c78eb6502446",
+      "699483fe555a04b9d6384c0a"
+    ],
+    "lastMessage": "😃😃",
+    "unreadCount": {
+      "699483fe555a04b9d6384c0a": 0,
+      "698c9d5970c4c78eb6502446": 0
+    },
+    "createdAt": "2026-02-17T15:10:44.174Z",
+    "updatedAt": "2026-02-17T15:19:45.579Z",
+    "__v": 0
+  }
+]

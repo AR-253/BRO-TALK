@@ -5,8 +5,27 @@ const Topic = require('../models/Topic');
 // @route   GET /api/topics
 // @access  Public
 const getTopics = asyncHandler(async (req, res) => {
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+    const search = req.query.search || '';
+    const sort = req.query.sort || 'newest';
+
+    const query = { isActive: true };
+    if (search) {
+        query.$or = [
+            { title: { $regex: search, $options: 'i' } },
+            { description: { $regex: search, $options: 'i' } }
+        ];
+    }
+
+    let sortObj = { postCount: -1 }; // Default: popular
+    if (sort === 'newest') sortObj = { createdAt: -1 };
+    if (sort === 'oldest') sortObj = { createdAt: 1 };
+
+    const total = await Topic.countDocuments(query);
+
     const topics = await Topic.aggregate([
-        { $match: { isActive: true } },
+        { $match: query },
         {
             $lookup: {
                 from: 'posts',
@@ -25,9 +44,22 @@ const getTopics = asyncHandler(async (req, res) => {
                 posts: 0
             }
         },
-        { $sort: { postCount: -1 } }
+        { $sort: sortObj },
+        { $skip: (page - 1) * limit },
+        { $limit: limit }
     ]);
-    res.status(200).json(topics);
+
+    // If no pagination params are provided, return direct array for legacy frontend support
+    if (!req.query.page && !req.query.limit) {
+        return res.status(200).json(topics);
+    }
+
+    res.status(200).json({
+        topics,
+        page,
+        totalPages: Math.ceil(total / limit),
+        totalTopics: total
+    });
 });
 
 // @desc    Get single topic

@@ -1,0 +1,172 @@
+[
+  {
+    "_id": "698f70612198d2f875686e02",
+    "title": "The Solo-Preneur Stack for 2026",
+    "content": "1. Stripe for payments. 2. Vercel for hosting. 3. Cursor for dev. 4. X for distribution. That's all you need to hit $10k/month. Keep it simple.",
+    "topic": "698ca295e65eff1b4cb11114",
+    "user": "698cca5835f114fc6aa59ce3",
+    "isAnonymous": false,
+    "comments": [],
+    "trendingNotificationSent": false,
+    "reactions": [],
+    "__v": 0,
+    "createdAt": "2026-02-13T18:41:37.058Z",
+    "updatedAt": "2026-02-13T18:41:37.058Z"
+  },
+  {
+    "_id": "698f70612198d2f875686dff",
+    "title": "The Truth About Whey vs Casein",
+    "content": "Whey for the anabolic window, Casein for the overnight repair. Don't overcomplicate it. Just hit your 1g per lb of bodyweight and the gains will follow. Consistency > Perfect Timing.",
+    "topic": "698ca294e65eff1b4cb1110b",
+    "user": "698cca5835f114fc6aa59ce3",
+    "isAnonymous": false,
+    "comments": [],
+    "trendingNotificationSent": false,
+    "reactions": [],
+    "__v": 0,
+    "createdAt": "2026-02-13T18:41:37.057Z",
+    "updatedAt": "2026-02-13T18:41:37.057Z"
+  },
+  {
+    "_id": "698f70612198d2f875686e00",
+    "title": "Why Node.js 22 is a Game Changer for Backends",
+    "content": "With built-in WebSocket support and native test runners, the ecosystem is leaner than ever. Are you still reaching for external libs or going native?",
+    "topic": "698b5ef3f0762984ad5575c8",
+    "user": "698f387b36e1adf40e8ea853",
+    "isAnonymous": false,
+    "comments": [],
+    "trendingNotificationSent": false,
+    "reactions": [],
+    "__v": 0,
+    "createdAt": "2026-02-13T18:41:37.057Z",
+    "updatedAt": "2026-02-13T18:41:37.057Z"
+  },
+  {
+    "_id": "698f70612198d2f875686e06",
+    "title": "Is VR finally ready for the mainstream?",
+    "content": "Just tried the latest haptic suit with GTA VI (modded). The immersion is terrifyingly real. We are officially in the Matrix.",
+    "topic": "698ca296e65eff1b4cb1111d",
+    "user": "698f387b36e1adf40e8ea853",
+    "isAnonymous": false,
+    "comments": [],
+    "trendingNotificationSent": false,
+    "reactions": [
+      {
+        "user": "698c9d5970c4c78eb6502446",
+        "type": "like",
+        "_id": "69949844e8142f08ce762e16"
+      },
+      {
+        "user": "698c9d5970c4c78eb6502446",
+        "type": "like",
+        "_id": "69949844e8142f08ce762e19"
+      }
+    ],
+    "__v": 2,
+    "createdAt": "2026-02-13T18:41:37.059Z",
+    "updatedAt": "2026-02-17T16:33:08.784Z"
+  },
+  {
+    "_id": "698f70612198d2f875686e01",
+    "title": "AI won't replace you, but a Bro using AI will.",
+    "content": "Spent today automating my PR reviews using a custom LLM script. Saved 3 hours. Use the tools or get left behind. #TechBro",
+    "topic": "698b5ef3f0762984ad5575c8",
+    "user": "698f3c9e4d7935ed7d2f1232",
+    "isAnonymous": false,
+    "comments": [],
+    "trendingNotificationSent": false,
+    "reactions": [],
+    "__v": 0,
+    "createdAt": "2026-02-13T18:41:37.058Z",
+    "updatedAt": "2026-02-13T18:41:37.058Z"
+  },
+  {
+    "_id": "698f70612198d2f875686e04",
+    "title": "What does 'Modern Bro' even mean in 2026?",
+    "content": "It's about balance. Career, health, mindset, and community. We're moving away from toxic traits and towards accountability. Thoughts?",
+    "topic": "698ca296e65eff1b4cb11120",
+    "user": "698c9d5970c4c78eb6502446",
+    "isAnonymous": false,
+    "comments": [],
+    "trendingNotificationSent": false,
+    "reactions": [],
+    "__v": 0,
+    "createdAt": "2026-02-13T18:41:37.059Z",
+    "updatedAt": "2026-02-13T18:41:37.059Z"
+  },
+  {
+    "_id": "698f70612198d2f875686e03",
+    "title": "High-Interest Savings vs Index Funds right now?",
+    "content": "With the market volatility, I'm parking 40% in HYSA and DCA-ing the rest into VOO. What's your play this quarter?",
+    "topic": "698ca295e65eff1b4cb11114",
+    "user": "698c9d5970c4c78eb6502446",
+    "isAnonymous": false,
+    "comments": [
+      "699484a3555a04b9d6384d90"
+    ],
+    "trendingNotificationSent": false,
+    "reactions": [
+      {
+        "user": "698c9d5970c4c78eb6502446",
+        "type": "like",
+        "_id": "698f7b5b55d5aead7b106dc6"
+      },
+      {
+        "user": "699483fe555a04b9d6384c0a",
+        "type": "like",
+        "_id": "6994849c555a04b9d6384d6c"
+      }
+    ],
+    "__v": 12,
+    "createdAt": "2026-02-13T18:41:37.059Z",
+    "updatedAt": "2026-02-17T15:09:24.085Z"
+  },
+  {
+    "_id": "698f70612198d2f875686e05",
+    "title": "Communication is the real 'Alpha' trait",
+    "content": "True strength is being able to articulate your needs and listen to your partner without your ego getting in the way. Don't let the internet tell you otherwise.",
+    "topic": "698ca294e65eff1b4cb11105",
+    "user": "698cca5835f114fc6aa59ce3",
+    "isAnonymous": false,
+    "comments": [],
+    "trendingNotificationSent": false,
+    "reactions": [],
+    "__v": 0,
+    "createdAt": "2026-02-13T18:41:37.059Z",
+    "updatedAt": "2026-02-13T18:41:37.059Z"
+  },
+  {
+    "_id": "698f70612198d2f875686dfe",
+    "title": "15-Minute Morning Routine for High-Performance Bros",
+    "content": "Stop scrolling and start moving. A quick burst of compound movements (pushups, squats, lunges) followed by 2 minutes of cold exposure sets your dopamine and cortisol for the day. Who's in?",
+    "topic": "698ca294e65eff1b4cb1110b",
+    "user": "698c9d5970c4c78eb6502446",
+    "isAnonymous": false,
+    "comments": [],
+    "trendingNotificationSent": false,
+    "reactions": [],
+    "__v": 0,
+    "createdAt": "2026-02-13T18:41:37.053Z",
+    "updatedAt": "2026-02-13T18:41:37.053Z"
+  },
+  {
+    "_id": "6994bcd9e8142f08ce7630d8",
+    "title": "religion",
+    "content": "Allah is great",
+    "topic": "6994bcb9e8142f08ce7630b0",
+    "user": "698c9d5970c4c78eb6502446",
+    "isAnonymous": false,
+    "comments": [],
+    "trendingNotificationSent": false,
+    "reactions": [
+      {
+        "user": "698c9d5970c4c78eb6502446",
+        "type": "love",
+        "_id": "6994bce2e8142f08ce7630ff"
+      }
+    ],
+    "createdAt": "2026-02-17T19:09:13.203Z",
+    "updatedAt": "2026-02-17T19:09:22.627Z",
+    "__v": 1
+  }
+]

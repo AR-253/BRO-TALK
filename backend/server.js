@@ -10,10 +10,34 @@ dotenv.config();
 // Connect to Database
 connectDB();
 
+// Initialize Cron Jobs
+require('./utils/cronJobs');
+
 const app = express();
 
 // Middleware
-app.use(cors());
+// CORS
+const allowedOrigins = [
+    'http://localhost:3000',
+    'http://localhost:3001',
+    /\.vercel\.app$/,        // any vercel subdomain
+    /\.onrender\.com$/,      // render frontends
+];
+
+app.use(cors({
+    origin: (origin, callback) => {
+        // Allow requests with no origin (mobile apps, curl, server-to-server)
+        if (!origin) return callback(null, true);
+        const allowed = allowedOrigins.some(o =>
+            typeof o === 'string' ? o === origin : o.test(origin)
+        );
+        if (allowed) return callback(null, true);
+        // In production, also allow any custom domain (set FRONTEND_URL env var)
+        if (process.env.FRONTEND_URL && origin === process.env.FRONTEND_URL) return callback(null, true);
+        return callback(null, true); // open for demo — tighten after launch
+    },
+    credentials: true,
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -25,6 +49,7 @@ app.use('/api/comments', require('./routes/commentRoutes'));
 app.use('/api/notifications', require('./routes/notificationRoutes'));
 app.use('/api/messages', require('./routes/messageRoutes'));
 app.use('/api/reports', require('./routes/reportRoutes'));
+app.use('/api/settings', require('./routes/settingsRoutes'));
 app.use('/api/upload', require('./routes/uploadRoutes'));
 
 // Make uploads folder static
@@ -39,7 +64,17 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
-const server = app.listen(PORT, console.log(`Server running on port ${PORT}`));
+const server = app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
+
+server.on('error', (err) => {
+    console.error('Server error:', err.message);
+    if (err.code === 'EADDRINUSE') {
+        console.error(`Port ${PORT} is already in use.`);
+    }
+});
+
 
 // Handle unhandled promise rejections
 process.on('unhandledRejection', (err, promise) => {
@@ -53,4 +88,6 @@ process.on('uncaughtException', (err) => {
     console.log(err.stack);
     // process.exit(1);
 });
+
+module.exports = app;
 

@@ -95,7 +95,7 @@ const Login = ({ isAdmin = false }) => {
                     animate={{ opacity: 1, scale: 1 }}
                     className="w-full max-w-[440px] mx-auto"
                 >
-                    <div className="glass rounded-[40px] border border-white/10 shadow-2xl p-10 relative overflow-hidden">
+                    <div className="glass rounded-[32px] border border-white/10 shadow-2xl p-7 relative overflow-hidden">
                         <div className="absolute top-0 right-0 p-8">
                             <Link to="/">
                                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="text-indigo-400 hover:text-white transition-colors">
@@ -104,12 +104,12 @@ const Login = ({ isAdmin = false }) => {
                             </Link>
                         </div>
 
-                        <div className="mb-10">
+                        <div className="mb-6">
                             <h2 className="text-3xl font-black text-white tracking-tight mb-2">Welcome Back</h2>
                             <p className="text-indigo-300 font-medium">Log in to your account</p>
                         </div>
 
-                        <form onSubmit={handleSubmit} className="space-y-6">
+                        <form onSubmit={handleSubmit} className="space-y-4">
                             {error && (
                                 <motion.div
                                     initial={{ opacity: 0, y: -10 }}
@@ -131,7 +131,7 @@ const Login = ({ isAdmin = false }) => {
                                             required
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
-                                            className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-indigo-300/30 focus:outline-none focus:bg-white/10 focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold"
+                                            className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-indigo-300/30 focus:outline-none focus:bg-white/10 focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold"
                                             placeholder="name@company.com"
                                         />
                                     </div>
@@ -151,7 +151,7 @@ const Login = ({ isAdmin = false }) => {
                                             required
                                             value={password}
                                             onChange={(e) => setPassword(e.target.value)}
-                                            className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-indigo-300/30 focus:outline-none focus:bg-white/10 focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold"
+                                            className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-indigo-300/30 focus:outline-none focus:bg-white/10 focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold"
                                             placeholder="••••••••"
                                         />
                                     </div>
@@ -163,7 +163,7 @@ const Login = ({ isAdmin = false }) => {
                                 whileTap={{ scale: 0.98 }}
                                 type="submit"
                                 disabled={loading}
-                                className="w-full py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-black rounded-2xl shadow-xl shadow-indigo-600/20 transition-all flex items-center justify-center space-x-2"
+                                className="w-full py-3.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-black rounded-2xl shadow-xl shadow-indigo-600/20 transition-all flex items-center justify-center space-x-2"
                             >
                                 {loading ? (
                                     <Loader2 className="w-5 h-5 animate-spin" />
@@ -173,7 +173,7 @@ const Login = ({ isAdmin = false }) => {
                             </motion.button>
                         </form>
 
-                        <div className="mt-10 flex flex-col items-center space-y-6">
+                        <div className="mt-5 flex flex-col items-center space-y-4">
                             <div className="flex items-center w-full space-x-4">
                                 <div className="h-px bg-white/10 flex-1" />
                                 <span className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">Or continue with</span>

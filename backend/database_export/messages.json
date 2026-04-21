@@ -1,0 +1,162 @@
+[
+  {
+    "_id": "698e223e271d26e68bfe9c6d",
+    "conversation": "698e223e271d26e68bfe9c6b",
+    "sender": "698c9d5970c4c78eb6502446",
+    "content": "hi",
+    "isRead": true,
+    "createdAt": "2026-02-12T18:55:58.920Z",
+    "updatedAt": "2026-02-13T16:45:24.933Z",
+    "__v": 0
+  },
+  {
+    "_id": "698e236b9d5db8c89ec773ed",
+    "conversation": "698e223e271d26e68bfe9c6b",
+    "sender": "698de80cd2d2a67f9c0a9455",
+    "content": "how are you ?",
+    "isRead": true,
+    "createdAt": "2026-02-12T19:00:59.105Z",
+    "updatedAt": "2026-02-12T19:05:15.622Z",
+    "__v": 0
+  },
+  {
+    "_id": "698e2481b32fa39e7ea2e8c3",
+    "conversation": "698e2480b32fa39e7ea2e8c1",
+    "sender": "698c9d5970c4c78eb6502446",
+    "content": "hello ",
+    "isRead": true,
+    "createdAt": "2026-02-12T19:05:37.120Z",
+    "updatedAt": "2026-02-12T19:06:54.179Z",
+    "__v": 0
+  },
+  {
+    "_id": "698e2592b32fa39e7ea2eb44",
+    "conversation": "698e2480b32fa39e7ea2e8c1",
+    "sender": "698cca5835f114fc6aa59ce3",
+    "content": "how are you ??",
+    "isRead": true,
+    "createdAt": "2026-02-12T19:10:10.328Z",
+    "updatedAt": "2026-02-12T19:10:41.231Z",
+    "__v": 0
+  },
+  {
+    "_id": "698e2857b32fa39e7ea2ecf6",
+    "conversation": "698e2480b32fa39e7ea2e8c1",
+    "sender": "698c9d5970c4c78eb6502446",
+    "content": "😊",
+    "isRead": false,
+    "createdAt": "2026-02-12T19:21:59.883Z",
+    "updatedAt": "2026-02-12T19:21:59.883Z",
+    "__v": 0
+  },
+  {
+    "_id": "698f4ab4e599b6b94a2dbb66",
+    "conversation": "698e2480b32fa39e7ea2e8c1",
+    "sender": "698c9d5970c4c78eb6502446",
+    "content": "hi ",
+    "isRead": false,
+    "createdAt": "2026-02-13T16:00:52.818Z",
+    "updatedAt": "2026-02-13T16:00:52.818Z",
+    "__v": 0
+  },
+  {
+    "_id": "698f549e8bb80ddadceae1d6",
+    "conversation": "698e223e271d26e68bfe9c6b",
+    "sender": "698c9d5970c4c78eb6502446",
+    "content": "hi",
+    "isRead": true,
+    "createdAt": "2026-02-13T16:43:10.108Z",
+    "updatedAt": "2026-02-13T16:45:24.933Z",
+    "__v": 0
+  },
+  {
+    "_id": "699484f4555a04b9d6384e9f",
+    "conversation": "699484f4555a04b9d6384e9d",
+    "sender": "698c9d5970c4c78eb6502446",
+    "content": "hello ",
+    "isRead": true,
+    "createdAt": "2026-02-17T15:10:44.368Z",
+    "updatedAt": "2026-02-17T15:12:10.059Z",
+    "__v": 0
+  },
+  {
+    "_id": "699484fc555a04b9d6384eb3",
+    "conversation": "699484f4555a04b9d6384e9d",
+    "sender": "698c9d5970c4c78eb6502446",
+    "content": "ki hal chal hy ",
+    "isRead": true,
+    "createdAt": "2026-02-17T15:10:52.854Z",
+    "updatedAt": "2026-02-17T15:12:10.059Z",
+    "__v": 0
+  },
+  {
+    "_id": "699484fe555a04b9d6384ebf",
+    "conversation": "699484f4555a04b9d6384e9d",
+    "sender": "698c9d5970c4c78eb6502446",
+    "content": "ki hal chal hy ",
+    "isRead": true,
+    "createdAt": "2026-02-17T15:10:54.740Z",
+    "updatedAt": "2026-02-17T15:12:10.059Z",
+    "__v": 0
+  },
+  {
+    "_id": "6994854e555a04b9d6384f79",
+    "conversation": "699484f4555a04b9d6384e9d",
+    "sender": "699483fe555a04b9d6384c0a",
+    "content": "kuch nahi",
+    "isRead": true,
+    "createdAt": "2026-02-17T15:12:14.639Z",
+    "updatedAt": "2026-02-17T15:12:21.763Z",
+    "__v": 0
+  },
+  {
+    "_id": "69948550555a04b9d6384f86",
+    "conversation": "699484f4555a04b9d6384e9d",
+    "sender": "699483fe555a04b9d6384c0a",
+    "content": "kuch nahi",
+    "isRead": true,
+    "createdAt": "2026-02-17T15:12:16.545Z",
+    "updatedAt": "2026-02-17T15:12:21.763Z",
+    "__v": 0
+  },
+  {
+    "_id": "69948551555a04b9d6384f8f",
+    "conversation": "699484f4555a04b9d6384e9d",
+    "sender": "699483fe555a04b9d6384c0a",
+    "content": "kuch nahi",
+    "isRead": true,
+    "createdAt": "2026-02-17T15:12:17.759Z",
+    "updatedAt": "2026-02-17T15:12:21.763Z",
+    "__v": 0
+  },
+  {
+    "_id": "69948557555a04b9d6384fa5",
+    "conversation": "699484f4555a04b9d6384e9d",
+    "sender": "699483fe555a04b9d6384c0a",
+    "content": "kuch nahi",
+    "isRead": true,
+    "createdAt": "2026-02-17T15:12:23.461Z",
+    "updatedAt": "2026-02-17T15:12:33.489Z",
+    "__v": 0
+  },
+  {
+    "_id": "6994858f555a04b9d6385059",
+    "conversation": "699484f4555a04b9d6384e9d",
+    "sender": "698c9d5970c4c78eb6502446",
+    "content": "enjoy 🤩🤩🤩🤩",
+    "isRead": true,
+    "createdAt": "2026-02-17T15:13:19.357Z",
+    "updatedAt": "2026-02-17T15:13:23.983Z",
+    "__v": 0
+  },
+  {
+    "_id": "699486ae555a04b9d6385208",
+    "conversation": "699484f4555a04b9d6384e9d",
+    "sender": "699483fe555a04b9d6384c0a",
+    "content": "😃😃",
+    "isRead": true,
+    "createdAt": "2026-02-17T15:18:06.915Z",
+    "updatedAt": "2026-02-17T15:19:45.768Z",
+    "__v": 0
+  }
+]

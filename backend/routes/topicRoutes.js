@@ -12,7 +12,7 @@ const { protect, admin } = require('../middleware/authMiddleware');
 
 router.route('/')
     .get(getTopics)
-    .post(protect, createTopic);
+    .post(protect, admin, createTopic);
 
 router.route('/:id')
     .get(getTopicById)

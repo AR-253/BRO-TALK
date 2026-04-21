@@ -1,0 +1,153 @@
+[
+  {
+    "_id": "698b5ef3f0762984ad5575c8",
+    "title": "Technology",
+    "description": "All things tech",
+    "isActive": true,
+    "subscribers": [
+      "698c9d5970c4c78eb6502446"
+    ],
+    "createdBy": "698b5ef3f0762984ad5575c4",
+    "createdAt": "2026-02-10T16:38:11.819Z",
+    "updatedAt": "2026-02-12T18:32:47.006Z",
+    "__v": 7
+  },
+  {
+    "_id": "698ca294e65eff1b4cb11105",
+    "title": "Dating & Relationships",
+    "description": "Discuss dating advice, relationship challenges, and share your experiences.",
+    "isActive": true,
+    "subscribers": [
+      "698c9d5970c4c78eb6502446"
+    ],
+    "createdBy": "698b5db8f4883ec466d7b4c9",
+    "createdAt": "2026-02-11T15:39:00.405Z",
+    "updatedAt": "2026-02-11T18:52:31.353Z",
+    "__v": 1
+  },
+  {
+    "_id": "698ca294e65eff1b4cb11108",
+    "title": "Mental Health & Stress",
+    "description": "A safe space to talk about mental health, stress management, and emotional well-being.",
+    "isActive": true,
+    "subscribers": [],
+    "createdBy": "698b5db8f4883ec466d7b4c9",
+    "createdAt": "2026-02-11T15:39:00.651Z",
+    "updatedAt": "2026-02-11T15:39:00.651Z",
+    "__v": 0
+  },
+  {
+    "_id": "698ca294e65eff1b4cb1110b",
+    "title": "Fitness & Health",
+    "description": "Share workouts, nutrition tips, and health advice with the community.",
+    "isActive": true,
+    "subscribers": [],
+    "createdBy": "698b5db8f4883ec466d7b4c9",
+    "createdAt": "2026-02-11T15:39:00.906Z",
+    "updatedAt": "2026-02-11T15:39:00.906Z",
+    "__v": 0
+  },
+  {
+    "_id": "698ca295e65eff1b4cb1110e",
+    "title": "Sports",
+    "description": "Discuss your favorite sports, teams, games, and athletic events.",
+    "isActive": true,
+    "subscribers": [
+      "698c9d5970c4c78eb6502446"
+    ],
+    "createdBy": "698b5db8f4883ec466d7b4c9",
+    "createdAt": "2026-02-11T15:39:01.143Z",
+    "updatedAt": "2026-02-12T19:24:26.858Z",
+    "__v": 1
+  },
+  {
+    "_id": "698ca295e65eff1b4cb11111",
+    "title": "Fishing",
+    "description": "Tips, tricks, and stories for fishing enthusiasts.",
+    "isActive": true,
+    "subscribers": [],
+    "createdBy": "698b5db8f4883ec466d7b4c9",
+    "createdAt": "2026-02-11T15:39:01.391Z",
+    "updatedAt": "2026-02-11T15:39:01.391Z",
+    "__v": 0
+  },
+  {
+    "_id": "698ca295e65eff1b4cb11114",
+    "title": "Career & Money",
+    "description": "Advice on career growth, financial planning, investments, and money management.",
+    "isActive": true,
+    "subscribers": [],
+    "createdBy": "698b5db8f4883ec466d7b4c9",
+    "createdAt": "2026-02-11T15:39:01.628Z",
+    "updatedAt": "2026-02-11T15:39:01.628Z",
+    "__v": 0
+  },
+  {
+    "_id": "698ca295e65eff1b4cb11117",
+    "title": "Faith & Purpose",
+    "description": "Explore questions of faith, spirituality, and finding purpose in life.",
+    "isActive": true,
+    "subscribers": [],
+    "createdBy": "698b5db8f4883ec466d7b4c9",
+    "createdAt": "2026-02-11T15:39:01.933Z",
+    "updatedAt": "2026-02-11T15:39:01.933Z",
+    "__v": 0
+  },
+  {
+    "_id": "698ca296e65eff1b4cb1111a",
+    "title": "Fatherhood",
+    "description": "Support and advice for fathers navigating the journey of parenthood.",
+    "isActive": true,
+    "subscribers": [],
+    "createdBy": "698b5db8f4883ec466d7b4c9",
+    "createdAt": "2026-02-11T15:39:02.181Z",
+    "updatedAt": "2026-02-11T15:39:02.181Z",
+    "__v": 0
+  },
+  {
+    "_id": "698ca296e65eff1b4cb1111d",
+    "title": "Lifestyle & Hobbies",
+    "description": "Share your hobbies, lifestyle tips, and personal interests.",
+    "isActive": true,
+    "subscribers": [],
+    "createdBy": "698b5db8f4883ec466d7b4c9",
+    "createdAt": "2026-02-11T15:39:02.425Z",
+    "updatedAt": "2026-02-11T15:39:02.425Z",
+    "__v": 0
+  },
+  {
+    "_id": "698ca296e65eff1b4cb11120",
+    "title": "Advice / Venting",
+    "description": "Need advice or just need to vent? This is the place for open support.",
+    "isActive": true,
+    "subscribers": [],
+    "createdBy": "698b5db8f4883ec466d7b4c9",
+    "createdAt": "2026-02-11T15:39:02.664Z",
+    "updatedAt": "2026-02-11T15:39:02.664Z",
+    "__v": 0
+  },
+  {
+    "_id": "698f4e7c8bb80ddadceade46",
+    "title": "office politics",
+    "description": "creepy peoples\n",
+    "isActive": true,
+    "subscribers": [],
+    "createdBy": "698c9d5970c4c78eb6502446",
+    "createdAt": "2026-02-13T16:17:00.229Z",
+    "updatedAt": "2026-02-13T17:52:11.067Z",
+    "__v": 2
+  },
+  {
+    "_id": "6994bcb9e8142f08ce7630b0",
+    "title": "islamic content",
+    "description": "islamic content ",
+    "isActive": true,
+    "subscribers": [
+      "698c9d5970c4c78eb6502446"
+    ],
+    "createdBy": "698c9d5970c4c78eb6502446",
+    "createdAt": "2026-02-17T19:08:41.368Z",
+    "updatedAt": "2026-02-17T19:08:49.863Z",
+    "__v": 1
+  }
+]

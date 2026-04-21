@@ -157,7 +157,7 @@ const PostFeed = () => {
     return (
         <div className={currentUser ? "grid grid-cols-1 lg:grid-cols-4 gap-8 relative z-10" : "max-w-4xl mx-auto relative z-10"}>
             {currentUser && (
-                <div className="hidden lg:block space-y-8 sticky top-28 h-fit">
+                <div className="hidden lg:block space-y-4 sticky top-0 h-fit">
                     <div className="glass rounded-2xl p-6 border border-white/10 shadow-2xl">
                         <div className="flex items-center space-x-4 mb-8">
                             <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center p-0.5 shadow-lg overflow-hidden">
@@ -321,21 +321,37 @@ const PostFeed = () => {
                                     <div className="p-8 relative z-10">
                                         <div className="flex items-center justify-between mb-6">
                                             <div className="flex items-center space-x-4">
-                                                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center p-0.5 shadow-lg overflow-hidden">
-                                                    {post.user?.profilePicture ? (
-                                                        <img src={getImageUrl(post.user.profilePicture)} alt={post.user.name} className="w-full h-full object-cover rounded-lg" />
-                                                    ) : (
-                                                        <span className="text-white font-black text-lg">{post.user?.name ? post.user.name.charAt(0).toUpperCase() : '?'}</span>
-                                                    )}
-                                                </div>
-                                                <div>
-                                                    <p className="text-white font-bold hover:text-pink-400 cursor-pointer transition-colors tracking-tight">
-                                                        {post.user?.name || 'Anonymous'}
-                                                    </p>
-                                                    <div className="flex items-center space-x-2 text-indigo-300 text-[10px] font-black uppercase tracking-widest mt-0.5">
-                                                        <span>{new Date(post.createdAt).toLocaleDateString()}</span>
+                                                {post.user?._id ? (
+                                                    <Link to={`/profile/${post.user._id}`} className="flex items-center space-x-4 group/user">
+                                                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center p-0.5 shadow-lg overflow-hidden ring-2 ring-transparent group-hover/user:ring-pink-500/50 transition-all">
+                                                            {post.user?.profilePicture ? (
+                                                                <img src={getImageUrl(post.user.profilePicture)} alt={post.user.name} className="w-full h-full object-cover rounded-lg" />
+                                                            ) : (
+                                                                <span className="text-white font-black text-lg">{post.user?.name ? post.user.name.charAt(0).toUpperCase() : '?'}</span>
+                                                            )}
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-white font-bold group-hover/user:text-pink-400 cursor-pointer transition-colors tracking-tight">
+                                                                {post.user?.name}
+                                                            </p>
+                                                            <div className="flex items-center space-x-2 text-indigo-300 text-[10px] font-black uppercase tracking-widest mt-0.5">
+                                                                <span>{new Date(post.createdAt).toLocaleDateString()}</span>
+                                                            </div>
+                                                        </div>
+                                                    </Link>
+                                                ) : (
+                                                    <div className="flex items-center space-x-4">
+                                                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center p-0.5 shadow-lg overflow-hidden">
+                                                            <span className="text-white font-black text-lg">?</span>
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-indigo-300 font-bold tracking-tight">Anonymous</p>
+                                                            <div className="flex items-center space-x-2 text-indigo-300 text-[10px] font-black uppercase tracking-widest mt-0.5">
+                                                                <span>{new Date(post.createdAt).toLocaleDateString()}</span>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                )}
                                             </div>
                                             {post.user && currentUser._id === post.user._id && (
                                                 <div className="relative">
@@ -470,7 +486,7 @@ const PostFeed = () => {
 
             {/* Right Sidebar */}
             {currentUser && (
-                <div className="hidden lg:block space-y-6 sticky top-28 h-fit">
+                <div className="hidden lg:block sticky top-0" style={{ maxHeight: 'calc(100vh - 90px)', overflowY: 'auto', scrollbarWidth: 'none' }}>
                     {/* Trending Topics */}
                     <div className="glass rounded-2xl p-6 border border-white/10 shadow-2xl">
                         <div className="flex items-center justify-between mb-6">
@@ -491,8 +507,11 @@ const PostFeed = () => {
                     </div>
 
                     {/* Suggested Users */}
-                    <div className="glass rounded-2xl p-6 border border-white/10 shadow-2xl">
-                        <h2 className="text-white font-black text-[10px] uppercase tracking-[0.2em] mb-6">Connect</h2>
+                    <div className="glass rounded-2xl p-6 border border-white/10 shadow-2xl mt-6">
+                        <div className="flex items-center justify-between mb-6">
+                            <h2 className="text-white font-black text-[10px] uppercase tracking-[0.2em]">Connect</h2>
+                            <Link to="/connect" className="text-pink-500 text-[10px] font-black uppercase tracking-widest hover:underline">View All</Link>
+                        </div>
                         <div className="space-y-5">
                             {suggestions.map((user, i) => (
                                 <div key={i} className="flex items-center justify-between group">

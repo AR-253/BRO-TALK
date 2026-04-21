@@ -27,9 +27,9 @@ const protect = asyncHandler(async (req, res, next) => {
                 throw new Error('Session expired/revoked. Please log in again.');
             }
 
-            // Update lastSeen (heartbeat)
-            req.user.lastSeen = Date.now();
-            await req.user.save();
+            // Optional: Update lastSeen (throttle this in production)
+            // req.user.lastSeen = Date.now();
+            // await req.user.save();
 
             next();
         } catch (error) {
@@ -46,11 +46,20 @@ const protect = asyncHandler(async (req, res, next) => {
 });
 
 const admin = (req, res, next) => {
-    if (req.user && req.user.role === 'admin') {
+    if (req.user && (req.user.role === 'admin' || req.user.role === 'superadmin')) {
         next();
     } else {
         res.status(401);
         throw new Error('Not authorized as an admin');
+    }
+};
+
+const superAdmin = (req, res, next) => {
+    if (req.user && req.user.role === 'superadmin') {
+        next();
+    } else {
+        res.status(401);
+        throw new Error('Not authorized as super admin');
     }
 };
 
@@ -69,4 +78,4 @@ const getMe = asyncHandler(async (req, res, next) => {
     next();
 });
 
-module.exports = { protect, admin, getMe };
+module.exports = { protect, admin, superAdmin, getMe };

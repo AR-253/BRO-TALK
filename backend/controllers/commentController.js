@@ -3,6 +3,8 @@ const Comment = require('../models/Comment');
 const Post = require('../models/Post');
 const Notification = require('../models/Notification');
 const User = require('../models/User');
+const Report = require('../models/Report');
+const containsProfanity = require('../utils/profanityFilter');
 const { checkEngagement } = require('./postController');
 
 // Helper to extract mentions
@@ -21,7 +23,7 @@ const extractMentions = (content) => {
 // @route   GET /api/comments/post/:postId
 // @access  Public
 const getCommentsByPost = asyncHandler(async (req, res) => {
-    const comments = await Comment.find({ post: req.params.postId })
+    const comments = await Comment.find({ post: req.params.postId, isHidden: false })
         .populate('user', 'name profilePicture')
         .sort({ createdAt: 1 }); // Oldest first to build tree logically
 
@@ -123,6 +125,15 @@ const addComment = asyncHandler(async (req, res) => {
 
     const populatedComment = await Comment.findById(comment._id).populate('user', 'name');
     checkEngagement(postId); // Async trigger
+
+    // Auto-Moderation Check
+    if (await containsProfanity(content)) {
+        await Report.create({
+            reportedItem: comment._id,
+            itemType: 'Comment',
+            reason: 'System Flag: Profanity/Bad words detected.'
+        });
+    }
 
     res.status(201).json(populatedComment);
 });
